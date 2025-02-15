@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>❤️ 我喜欢你！ ❤️</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            text-align: center;
+            padding: 50px;
+            font-family: '微软雅黑', cursive;
+        }
+        h1 {
+            color: #ff0066;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        #message {
+            background: rgba(255,255,255,0.9);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 0 20px rgba(255,0,102,0.3);
+        }
+        .heart {
+            color: #ff0066;
+            font-size: 40px;
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+< img src="C:\Users\Administrator\Pictures\UbisoftConnect\微信图片_20250216041334(1).jpgURL" style="width: 200px; border-radius: 50%; margin: 20px;">
+    <div id="message">
+        <h1><span class="heart">❤️</span> 给 [杨章心] <span class="heart">❤️</span></h1>
+        <p style="font-size: 1.2em; line-height: 1.6;">
+            遇见你之后，我的世界开始有了色彩。<br>
+            你的笑容像阳光，温暖了我每一个瞬间。<br>
+            愿意给我一个机会，陪你走过未来的每一天吗？
+        </p >
+        <button onclick="showAnswer()" style="
+            background: #ff0066;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 20px;
+        ">点击查看答案</button>
+        <p id="response" style="display: none; font-size: 1.5em;">🎉 我喜欢你！我们在一起吧！ 🎉</p >
+    </div>
+
+    <script>
+        function showAnswer() {
+            document.getElementById('response').style.display = 'block';
+            // 添加花瓣特效（可选）
+            for(let i=0; i<50; i++) {
+                const heart = document.createElement('div');
+                heart.style.position = 'fixed';
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.top = Math.random() * 100 + '%';
+                heart.style.fontSize = Math.random() * 20 + 10 + 'px';
+                heart.style.color = '#ff0066';
+                heart.textContent = '🌸';
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 2000);
+            }
+        }
+    </script>
+</body>
+</html>
